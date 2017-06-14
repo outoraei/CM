@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="entry_fragment1">1</string>
+    <string name="entry_fragment2">2</string>
+    <string name="entry_fragment3">3</string>
+    <string name="entry_ok">进入</string>
+    <string name="app_name">Demo</string>
+    <string name="favorite">这是最爱界面</string>
+    <string name="square">这是广场界面</string>
+    <string name="my">这是我界面</string>
+    <string name="fragment_square">广场</string>
+    <string name="fragment_favorite">最爱</string>
+    <string name="fragment_my">我</string>
+    <string name="videoplay_fav_txt">收藏</string>
+    <string name="videoplay_cm1_txt">TestCM1</string>
+    <string name="videoplay_cm2_txt">TestCM2</string>
+    <string name="videoplay_cm3_txt">TestCM3</string>
+    <string name="videoplay_recommand">推荐</string>
+    <string name="answer_correct_congratulation">恭喜你，答对了</string>
+    <string name="answer_incorrect">真遗憾，答错了，再接再厉！</string>
+
+</resources>

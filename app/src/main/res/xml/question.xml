@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<question>
+    <title>
+问题1
+    </title>
+    <content>
+男人要有野心
+    </content>
+    <answer>
+true
+    </answer>
+
+    <title>
+问题2
+    </title>
+    <content>
+还得有执行力
+    </content>
+    <answer>
+true
+    </answer>
+
+    <title>
+问题3
+    </title>
+    <content>
+还得有贵人帮助
+    </content>
+    <answer>
+true
+    </answer>
+</question>

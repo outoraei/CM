@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation>
+
+    <level1>
+        <code>
+100
+        </code>
+
+        <content>
+yyy
+        </content>
+
+        <level2>
+            <code>
+200
+            </code>
+
+            <content>
+zzz
+            </content>
+
+            <item>
+                <code>
+300
+                </code>
+
+                <content>
+ppp
+                </content>
+            </item>
+        </level2>
+    </level1>
+
+</navigation>
