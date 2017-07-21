@@ -19,5 +19,17 @@
     <string name="videoplay_recommand">推荐</string>
     <string name="answer_correct_congratulation">恭喜你，答对了</string>
     <string name="answer_incorrect">真遗憾，答错了，再接再厉！</string>
+    <string name="button_right">right</string>
+    <string name="button_wrong">wrong</string>
+    <string name="play">播放</string>
+    <string name="stop">暂停</string>
+    <string name="drop_bonus">天降红包</string>
+    <string name="bonus_detail">$$$元</string>
+    <string name="bonus_hint">已存入您的红包</string>
+    <string name="wallet">钱包</string>
+    <string name="nikename">NikeName</string>
+    <string name="username">UserName : #####</string>
+    <string name="title_my">我的账户</string>
+    <string name="wallet_title_my">我的钱包</string>
 
 </resources>

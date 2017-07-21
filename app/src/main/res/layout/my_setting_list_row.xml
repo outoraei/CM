@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+    <LinearLayout
+        android:id="@+id/wallet_my_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/my_setting_image_icon"
+                android:gravity="left|center"
+                android:src="@drawable/favorite_unselected"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:id="@+id/my_setting_text_content"
+                android:text="@string/wallet_title_my"
+                android:gravity="left|center"
+                android:textSize="10dp"
+                android:layout_toRightOf="@+id/my_setting_image_icon"
+                android:layout_marginLeft="20dp"
+                />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/my_setting_go"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/scrubber_control_selector_holo"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

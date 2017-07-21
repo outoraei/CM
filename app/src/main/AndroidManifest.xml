@@ -31,7 +31,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.main.MainActivity" />
-        <activity android:name=".view.main.VideoPlayActivity"></activity>
+        <activity android:name=".view.main.VideoPlayActivity" />
     </application>
 
 </manifest>
