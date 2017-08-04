@@ -1,10 +1,17 @@
 package cm.demo.view.fragment;
 
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.os.Bundle;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
+import android.text.style.URLSpan;
+import android.text.util.Linkify;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import cm.demo.R;
@@ -15,7 +22,10 @@ public class FavoriteFragment extends BaseFragment {
 
     private ImageView favoriteImage;
     private TextView favoriteText;
-    View favoriteLayout;
+    private View favoriteLayout;
+    private LinearLayout favoriteTab;
+    private TextView favorite_waiting_message;
+    private TextView[] tabItem = null;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -44,6 +54,40 @@ public class FavoriteFragment extends BaseFragment {
                 setTabSelection(CMFragmentType.CMFRAGMENT_FAVORITE);
             }
         });
+
+        favoriteTab = (LinearLayout) getActivity().findViewById(R.id.favorite_tab);
+        initTabItems();
+
+        favorite_waiting_message = (TextView) getActivity().findViewById(R.id.favorite_waiting_message);
+        favorite_waiting_message.setVisibility(View.GONE);
+    }
+
+    private void initTabItems() {
+        int[] tabItemString = new int[]{R.string.category_favorite_my, R.string.sex_favorite_my, R.string.age_favorite_my};
+
+        TextView tv = null;
+        tabItem = new TextView[tabItemString.length];
+        for (int index = 0; index < tabItemString.length; index++) {
+            tv = new TextView(getActivity());
+            tv.setText(tabItemString[index]);
+            tv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    resetTabItems();
+                    ((TextView)v).setTextColor(Color.BLACK);
+                    favorite_waiting_message.setVisibility(View.VISIBLE);
+                }
+            });
+            favoriteTab.addView(tv);
+            tabItem[index] = tv;
+        }
+        resetTabItems();
+    }
+
+    private void resetTabItems() {
+        for (int index = 0; index < tabItem.length; index++) {
+            tabItem[index].setTextColor(Color.GRAY);
+        }
     }
 
     @Override

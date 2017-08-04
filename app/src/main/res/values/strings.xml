@@ -32,4 +32,10 @@
     <string name="title_my">我的账户</string>
     <string name="wallet_title_my">我的钱包</string>
 
+    <string name="category_favorite_my">　　类别　　</string>
+    <string name="sex_favorite_my">　　性别　　</string>
+    <string name="age_favorite_my">　　年龄　　</string>
+    <string name="confirm_favorite_my">　　确定　　</string>
+    <string name="waiting_message_favorite_my">正在为您挑选中...</string>
+
 </resources>
