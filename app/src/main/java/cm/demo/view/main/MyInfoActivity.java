@@ -1,15 +1,14 @@
-package cm.demo.view.base;
+package cm.demo.view.main;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.Window;
 
-public class CMBaseActivity extends Activity {
+import cm.demo.view.base.CMBaseActivity;
+
+public class MyInfoActivity extends CMBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
     }
-
 }

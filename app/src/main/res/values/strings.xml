@@ -37,5 +37,20 @@
     <string name="age_favorite_my">　　年龄　　</string>
     <string name="confirm_favorite_my">　　确定　　</string>
     <string name="waiting_message_favorite_my">正在为您挑选中...</string>
+    <string name="changeaccount">切换账户</string>
+    <string name="my_phone">账  户：</string>
+    <string name="my_phone_hint">请输入用户名或手机号</string>
+    <string name="my_password_title">密  码：</string>
+    <string name="my_password_hint">请输入密码</string>
+    <string name="my_login">登  录</string>
+    <string name="my_forget_password">忘记密码</string>
+
+    <string name="my_wallet_title">我的钱包</string>
+    <string name="my_order_title">我的订单</string>
+    <string name="my_shoppingcart_title">我的购物车</string>
+    <string name="my_setting_title">设置</string>
+    <string name="my_versionupdate_title">版本更新</string>
+    <string name="my_introduction_title">了解功能</string>
+    <string name="my_customservice_title">客服</string>
 
 </resources>

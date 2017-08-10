@@ -32,6 +32,16 @@
         </activity>
         <activity android:name=".view.main.MainActivity" />
         <activity android:name=".view.main.VideoPlayActivity" />
+
+        <activity android:name=".view.main.WalletActivity" />
+        <activity android:name=".view.main.OrderActivity" />
+        <activity android:name=".view.main.ShoppingCartActivity" />
+        <activity android:name=".view.main.SettingActivity" />
+        <activity android:name=".view.main.VersionUpdateActivity" />
+        <activity android:name=".view.main.IntroductionActivity" />
+        <activity android:name=".view.main.CustomServiceActivity" />
+        <activity android:name=".view.main.MyInfoActivity" />
+        <activity android:name=".view.main.SwitchAccountActivity" />
     </application>
 
 </manifest>

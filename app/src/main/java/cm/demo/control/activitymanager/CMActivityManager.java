@@ -4,9 +4,11 @@ import android.content.Context;
 
 public class CMActivityManager {
 
+	private CMActivityManager() {}
+
 	private static CMActivityManager instance = new CMActivityManager();
 
-	static CMActivityManager getInstance(Context context) {
+	public static CMActivityManager getInstance(Context context) {
 		return instance;
 	}
 

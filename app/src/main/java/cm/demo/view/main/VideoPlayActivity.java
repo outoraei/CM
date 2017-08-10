@@ -1,6 +1,5 @@
 package cm.demo.view.main;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -16,8 +15,9 @@ import cm.demo.model.QuestionModel;
 import cm.demo.util.BonusUtils;
 import cm.demo.util.CMLog;
 import cm.demo.util.QuestionListCreater;
+import cm.demo.view.base.CMBaseActivity;
 
-public class VideoPlayActivity extends Activity {
+public class VideoPlayActivity extends CMBaseActivity {
 
     private QuestionListModel questionModelList;
     private int answer_correct_count = 0;

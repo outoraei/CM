@@ -79,18 +79,20 @@
                         android:textSize="10dp" />
 
                     <TextView
-                        android:text="@string/waiting_message_favorite_my"
+                        android:id="@+id/switch_account"
+                        android:text="@string/changeaccount"
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="20dp"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp" />
-                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:gravity="center" />
+                    <!--<ImageView
                         android:layout_alignParentRight="true"
                         android:layout_marginRight="20dp"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:src="@drawable/favorite_selected"
-                        />
+                        /> -->
                 </RelativeLayout>
             </LinearLayout>
 
