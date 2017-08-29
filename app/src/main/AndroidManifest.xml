@@ -30,18 +30,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.main.MainActivity" />
-        <activity android:name=".view.main.VideoPlayActivity" />
+        <activity android:name=".view.main.MainActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".view.main.VideoPlayActivity" android:screenOrientation="landscape"/>
 
-        <activity android:name=".view.main.WalletActivity" />
-        <activity android:name=".view.main.OrderActivity" />
-        <activity android:name=".view.main.ShoppingCartActivity" />
-        <activity android:name=".view.main.SettingActivity" />
-        <activity android:name=".view.main.VersionUpdateActivity" />
-        <activity android:name=".view.main.IntroductionActivity" />
-        <activity android:name=".view.main.CustomServiceActivity" />
-        <activity android:name=".view.main.MyInfoActivity" />
-        <activity android:name=".view.main.SwitchAccountActivity" />
+        <activity android:name=".view.main.WalletActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.main.OrderActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.main.ShoppingCartActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.main.SettingActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.main.VersionUpdateActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.main.IntroductionActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.main.CustomServiceActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.main.MyInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".view.main.SwitchAccountActivity" android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

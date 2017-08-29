@@ -3,7 +3,6 @@ package cm.demo.view.main;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.KeyEvent;
-import android.view.Window;
 import android.widget.EditText;
 
 import cm.demo.R;
@@ -31,7 +30,6 @@ public class MainActivity extends CMBaseActivity {
 
         CMLog.LogD("CMNavigateCreater Init");
         CMNavigateCreater.getNavigateFromCode(this);
-        CMLog.LogD("CMFragmentManager Init");
         CMFragmentManager.getInstatnce().initMainActivityFragment(this);
     }
 

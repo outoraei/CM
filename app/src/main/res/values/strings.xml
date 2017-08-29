@@ -23,6 +23,7 @@
     <string name="button_wrong">wrong</string>
     <string name="play">播放</string>
     <string name="stop">暂停</string>
+    <string name="retry">重播</string>
     <string name="drop_bonus">天降红包</string>
     <string name="bonus_detail">$$$元</string>
     <string name="bonus_hint">已存入您的红包</string>

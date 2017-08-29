@@ -6,7 +6,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp">
+        android:layout_height="match_parent">
         <VideoView
             android:id="@+id/videoView"
             android:layout_width="match_parent"
@@ -26,6 +26,7 @@
             android:layout_centerInParent="true"
             android:onClick="openBonus"
             android:src="@color/blue"
+            android:visibility="gone"
             />
         <TextView
             android:id="@+id/openBounsHint"
@@ -36,6 +37,7 @@
             android:text="@string/drop_bonus"
             android:gravity="center"
             android:textSize="25dp"
+            android:visibility="gone"
             />
         <TextView
             android:id="@+id/playHint"
@@ -56,6 +58,7 @@
             android:layout_above="@+id/bonusHint"
             android:text="@string/bonus_detail"
             android:textSize="25dp"
+            android:visibility="gone"
             />
         <TextView
             android:id="@+id/bonusHint"
@@ -65,6 +68,7 @@
             android:gravity="center"
             android:text="@string/bonus_hint"
             android:textSize="25dp"
+            android:visibility="gone"
             />
         <ImageButton
             android:id="@+id/wallet"
@@ -75,13 +79,15 @@
             android:src="@color/red"
             android:layout_below="@+id/bonusHint"
             android:onClick="goToWalletScreen"
+            android:visibility="gone"
             />
     </RelativeLayout>
     
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:visibility="gone">
 
         <ImageView
             android:id="@+id/viedo_play_fav"
@@ -101,7 +107,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:visibility="gone">
         <TextView
             android:id="@+id/videoplay_recommand"
             android:text="@string/videoplay_recommand"
@@ -113,7 +120,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:visibility="gone">
         <TextView
             android:id="@+id/videoplay_cm1_txt"
             android:text="@string/videoplay_cm1_txt"
@@ -125,7 +133,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:visibility="gone">
         <TextView
             android:id="@+id/videoplay_cm2_txt"
             android:text="@string/videoplay_cm2_txt"
@@ -137,7 +146,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:visibility="gone">
         <TextView
             android:id="@+id/videoplay_cm3_txt"
             android:text="@string/videoplay_cm3_txt"
