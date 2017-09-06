@@ -1,22 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:orientation="vertical" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <ListView
-        android:id="@+id/shoppingcart_list"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:divider="#b5b5b5"
-        android:dividerHeight="1dp"
-        android:listSelector="@drawable/list_selector" />
-        
-    </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/shoppingcart_list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/shopping_checkout_layout">
+
+            <ListView
+                android:id="@+id/shoppingcart_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="#b5b5b5"
+                android:dividerHeight="1dp"
+                android:listSelector="@drawable/list_selector" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/shopping_checkout_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/shopping_checkout"
+                android:text="@string/shoppingcart_item_totalvalue"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/shopping_checkout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/shoppingcart_checkout"
+                android:textSize="10dp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
 
 </RelativeLayout>

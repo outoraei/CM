@@ -1,6 +1,7 @@
 package cm.demo.view.main;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -28,11 +29,20 @@ public class ShoppingCartActivity extends CMBaseActivity {
     List<ShoppingItemModel> shoppingList = null;
     ShoppingListAdapter adapter = null;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.shoppingcart_layout);
+
+        Button checkout_button = (Button) findViewById(R.id.shopping_checkout);
+        checkout_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoCheckOutScreen();
+            }
+        });
 
         initShoppingData();
 
@@ -51,6 +61,13 @@ public class ShoppingCartActivity extends CMBaseActivity {
                 return false;
             }
         });
+    }
+
+    private void gotoCheckOutScreen() {
+        CMLog.LogD("goToBalance");
+        Intent intent = new Intent();
+        intent.setClass(this, MyCheckoutActivity.class);
+        startActivity(intent);
     }
 
     private void initShoppingData() {

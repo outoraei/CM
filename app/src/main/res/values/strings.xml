@@ -60,5 +60,13 @@
     <string name="shoppingcart_item_description">描述：</string>
     <string name="shoppingcart_item_name">商品名称：</string>
     <string name="shoppingcart_item_eachvalue">单价：</string>
+    <string name="shoppingcart_checkout">去结算</string>
+    <string name="shoppingcart_checkout_title">确认订单</string>
+
+    <string name="my_wallet_item_balance">余额</string>
+    <string name="my_wallet_item_bonus">红包收入</string>
+    <string name="my_wallet_item_coupon">优惠券</string>
+    <string name="my_wallet_item_money_unit">元</string>
+    <string name="my_wallet_item_coupon_unit">张</string>
 
 </resources>
