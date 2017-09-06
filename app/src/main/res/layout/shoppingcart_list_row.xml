@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/shopping_item_image_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/shopping_item_image"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:src="@drawable/favorite_unselected" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/shopping_item_image_layout">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/shopping_item_content_layout"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:id="@+id/shopping_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="left|center"
+                    android:text="@string/shoppingcart_item_name"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/shopping_item_blank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/shopping_item_name"
+                    android:gravity="left|center"
+                    android:text="   "
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/shopping_item_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/shopping_item_blank"
+                    android:gravity="left|center"
+                    android:text="@string/shoppingcart_item_description"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/shopping_item_blank_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/shopping_item_description"
+                    android:gravity="left|center"
+                    android:text="   "
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/shopping_item_eachvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/shopping_item_blank_2"
+                    android:gravity="left|center"
+                    android:text="@string/shoppingcart_item_eachvalue"
+                    android:textSize="10dp" />
+
+                <LinearLayout
+                    android:id="@+id/shopping_item_num_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/shopping_item_description"
+                    android:layout_marginEnd="12dp"
+                    android:layout_toRightOf="@+id/shopping_item_eachvalue"
+                    android:gravity="right|center">
+
+                    <Button
+                        android:id="@+id/shopping_item_num_minus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/shopping_item_num"
+                        android:src="@drawable/scrubber_control_selector_holo"
+                        android:text="@string/shoppingcart_item_minus"
+                        android:focusable="false"/>
+
+                    <TextView
+                        android:id="@+id/shopping_item_num"
+                        android:layout_width="10dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="10dp" />
+
+                    <Button
+                        android:id="@+id/shopping_item_num_plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/shopping_item_num"
+                        android:src="@drawable/scrubber_control_selector_holo"
+                        android:text="@string/shoppingcart_item_plus"
+                        android:focusable="false"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/shopping_num_totalvalue_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="12dp"
+                android:layout_below="@+id/shopping_item_content_layout"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/shopping_item_totalvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:text="@string/shoppingcart_item_totalvalue"
+                    android:textSize="10dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

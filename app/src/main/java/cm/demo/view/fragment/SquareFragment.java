@@ -2,6 +2,8 @@ package cm.demo.view.fragment;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +21,6 @@ import cm.demo.model.CMInfoModel;
 import cm.demo.util.CMLog;
 import cm.demo.view.base.BaseFragment;
 import cm.demo.view.base.CMFragmentManager.CMFragmentType;
-import cm.demo.view.commoncontrol.CMImageLoader;
 import cm.demo.view.commoncontrol.CMListAdapter;
 import cm.demo.view.main.VideoPlayActivity;
 
@@ -45,7 +46,7 @@ public class SquareFragment extends BaseFragment {
         squareText = (TextView) getActivity().findViewById(R.id.square_text);
 
         squareImage.setImageResource(R.drawable.square_unselected);
-        squareText.setTextColor(getResources().getColor(R.color.unselect));
+        squareText.setTextColor(Color.GRAY);
 
         squareImage.setOnClickListener(new View.OnClickListener() {
 
@@ -79,8 +80,7 @@ public class SquareFragment extends BaseFragment {
             return;
         squareImage.setImageResource(hidden ? R.drawable.square_unselected
                 : R.drawable.square_selected);
-        squareText.setTextColor(getResources().getColor(
-                hidden ? R.color.unselect : R.color.select));
+        squareText.setTextColor(hidden ? Color.GRAY : Color.BLUE);
 
         super.onHiddenChanged(hidden);
     }
@@ -115,14 +115,10 @@ public class SquareFragment extends BaseFragment {
     class SquareListAdapter extends CMListAdapter {
 
         LayoutInflater inflater;
-        CMInfoModel item;
-        CMImageLoader imageLoader;
 
         public SquareListAdapter() {
             inflater = (LayoutInflater) getActivity().getSystemService(
                     Context.LAYOUT_INFLATER_SERVICE);
-            imageLoader = new CMImageLoader(getActivity()
-                    .getApplicationContext());
         }
 
         @Override
@@ -161,15 +157,19 @@ public class SquareFragment extends BaseFragment {
                 holder = (ViewHolder) convertView.getTag();
             }
 
-            item = square_list_data.get(position);
+            CMInfoModel item = square_list_data.get(position);
 
             holder.title.setText(item.getTitle());
             holder.artist.setText(item.getCreator());
             holder.duration.setText(item.getDuration().toString());
-            imageLoader.DisplayImage(item.getThumb_image_uri(),
-                    holder.thumb_image);
+            String uri = item.getThumb_image_uri();
+            if ("".equals(uri)) {
+                holder.thumb_image.setImageResource(R.drawable.ic_launcher);
+            } else {
+                holder.thumb_image.setImageURI(Uri.parse(uri));
+            }
+
             return convertView;
         }
-
     }
 }

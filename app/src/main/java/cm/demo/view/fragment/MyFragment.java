@@ -2,6 +2,7 @@ package cm.demo.view.fragment;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -63,7 +64,7 @@ public class MyFragment extends BaseFragment {
         myText = (TextView) getActivity().findViewById(R.id.my_text);
 
         myImage.setImageResource(R.drawable.my_selected);
-        myText.setTextColor(getResources().getColor(R.color.select));
+        myText.setTextColor(Color.BLUE);
 
         myImage.setOnClickListener(new View.OnClickListener() {
 
@@ -159,8 +160,7 @@ public class MyFragment extends BaseFragment {
 
         myImage.setImageResource(hidden ? R.drawable.my_unselected
                 : R.drawable.my_selected);
-        myText.setTextColor(getResources().getColor(
-                hidden ? R.color.unselect : R.color.select));
+        myText.setTextColor(hidden ? Color.GRAY : Color.BLUE);
         super.onHiddenChanged(hidden);
     }
 

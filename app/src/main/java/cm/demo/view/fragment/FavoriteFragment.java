@@ -1,12 +1,7 @@
 package cm.demo.view.fragment;
 
 import android.graphics.Color;
-import android.graphics.Paint;
 import android.os.Bundle;
-import android.text.Spannable;
-import android.text.SpannableStringBuilder;
-import android.text.style.URLSpan;
-import android.text.util.Linkify;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,7 +40,7 @@ public class FavoriteFragment extends BaseFragment {
                 .findViewById(R.id.favorite_text);
 
         favoriteImage.setImageResource(R.drawable.favorite_unselected);
-        favoriteText.setTextColor(getResources().getColor(R.color.unselect));
+        favoriteText.setTextColor(Color.GRAY);
 
         favoriteImage.setOnClickListener(new View.OnClickListener() {
 
@@ -74,7 +69,7 @@ public class FavoriteFragment extends BaseFragment {
                 @Override
                 public void onClick(View v) {
                     resetTabItems();
-                    ((TextView)v).setTextColor(Color.BLACK);
+                    ((TextView) v).setTextColor(Color.BLACK);
                     favorite_waiting_message.setVisibility(View.VISIBLE);
                 }
             });
@@ -98,8 +93,7 @@ public class FavoriteFragment extends BaseFragment {
             return;
         favoriteImage.setImageResource(hidden ? R.drawable.favorite_unselected
                 : R.drawable.favorite_selected);
-        favoriteText.setTextColor(getResources().getColor(
-                hidden ? R.color.unselect : R.color.select));
+        favoriteText.setTextColor(hidden ? Color.GRAY : Color.BLUE);
         super.onHiddenChanged(hidden);
     }
 }

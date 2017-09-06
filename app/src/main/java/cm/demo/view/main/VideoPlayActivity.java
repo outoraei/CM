@@ -298,6 +298,9 @@ public class VideoPlayActivity extends CMBaseActivity {
 
     @Override
     protected void onDestroy() {
+        if (videoView != null) {
+            videoView.stopPlayback();
+        }
         handler.removeCallbacks(vieoRunnable);
         super.onDestroy();
     }
