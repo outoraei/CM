@@ -101,15 +101,21 @@ public class SquareFragment extends BaseFragment {
             model.setDuration(i + ":00");
             model.setThumb_image_uri("");
             model.setVideo_uri("");
+            model.setTag1("tag1 " + i);
+            model.setTag2("tag2 " + i);
+            model.setTag3("tag3 " + i);
             square_list_data.add(model);
         }
     }
 
     final class ViewHolder {
         TextView title;
-        TextView artist;
+        //        TextView artist;
         TextView duration;
-        ImageView thumb_image;
+        ImageView icon;
+        TextView tag1;
+        TextView tag2;
+        TextView tag3;
     }
 
     class SquareListAdapter extends CMListAdapter {
@@ -145,13 +151,12 @@ public class SquareFragment extends BaseFragment {
             if (convertView == null) {
                 holder = new ViewHolder();
                 convertView = inflater.inflate(R.layout.list_row, null);
-                holder.title = (TextView) convertView.findViewById(R.id.title);
-                holder.artist = (TextView) convertView
-                        .findViewById(R.id.artist);
-                holder.duration = (TextView) convertView
-                        .findViewById(R.id.duration);
-                holder.thumb_image = (ImageView) convertView
-                        .findViewById(R.id.list_image);
+                holder.title = (TextView) convertView.findViewById(R.id.list_item_intro_content);
+                holder.duration = (TextView) convertView.findViewById(R.id.list_item_duration);
+                holder.icon = (ImageView) convertView.findViewById(R.id.list_item_icon);
+                holder.tag1 = (TextView) convertView.findViewById(R.id.list_item_tag1);
+                holder.tag2 = (TextView) convertView.findViewById(R.id.list_item_tag2);
+                holder.tag3 = (TextView) convertView.findViewById(R.id.list_item_tag3);
                 convertView.setTag(holder);
             } else {
                 holder = (ViewHolder) convertView.getTag();
@@ -160,14 +165,17 @@ public class SquareFragment extends BaseFragment {
             CMInfoModel item = square_list_data.get(position);
 
             holder.title.setText(item.getTitle());
-            holder.artist.setText(item.getCreator());
-            holder.duration.setText(item.getDuration().toString());
+            holder.duration.setText(item.getDuration());
+            CMLog.LogD("duration : " + item.getDuration());
             String uri = item.getThumb_image_uri();
             if ("".equals(uri)) {
-                holder.thumb_image.setImageResource(R.drawable.ic_launcher);
+                holder.icon.setImageResource(R.drawable.temp_no_10);
             } else {
-                holder.thumb_image.setImageURI(Uri.parse(uri));
+                holder.icon.setImageURI(Uri.parse(uri));
             }
+            holder.tag1.setText(item.getTag1());
+            holder.tag2.setText(item.getTag2());
+            holder.tag3.setText(item.getTag3());
 
             return convertView;
         }

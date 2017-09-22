@@ -1,73 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/list_selector"
-    android:orientation="horizontal"
-    android:padding="5dip" >
+    android:layout_height="250dp">
 
-	<!--  ListView最左边的缩略图 -->
-	<LinearLayout android:id="@+id/thumbnail" 
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:padding="3dip"		
-        android:layout_alignParentLeft="true"
-        android:background="@drawable/image_bg" 
-	    android:layout_marginRight="5dip">
-        
-		<ImageView     
-	        android:id="@+id/list_image"   
-	        android:layout_width="50dip"
-	        android:layout_height="50dip"
-	       />
-		<!--  android:src="@drawable/rihanna" -->
-        
-	</LinearLayout>
-    
-	<!-- 歌曲名-->
-    <TextView
-        android:id="@+id/title"
+    <RelativeLayout
+        android:id="@+id/video_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_bg" />
+
+        <TextView
+            android:id="@+id/list_item_intro_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="title"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/list_item_play" />
+
+        <TextView
+            android:id="@+id/list_item_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="time"
+            android:textSize="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/thumbnail"
-        android:layout_toRightOf="@+id/thumbnail"
-        android:text="Rihanna Love the way lie"
-        android:textColor="#040404"
-        android:typeface="sans" 
-        android:textSize="15dip"
-        android:textStyle="bold"/>
+        android:layout_marginTop="200dp">
 
-	<!-- 歌手名 -->
-    <TextView
-        android:id="@+id/artist"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/title"
-        android:textColor="#343434"
-        android:textSize="10dip"
-        android:layout_marginTop="1dip"
-        android:layout_toRightOf="@+id/thumbnail"
-        android:text="Just gona stand there and ..." />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/tab_bg"
+            android:orientation="horizontal">
 
-	<!-- 歌曲播放时间 -->
-    <TextView
-        android:id="@+id/duration"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@id/title"
-        android:gravity="right"
-        android:text="5:45"
-        android:layout_marginRight="5dip"
-        android:textSize="10dip"
-        android:textColor="#10bcc9"
-        android:textStyle="bold"/>
-      
-     <!-- 进入播放 -->    
-     <ImageView android:layout_width="wrap_content"
-     	android:layout_height="wrap_content"
-     	android:layout_alignParentRight="true"
-     	android:layout_centerVertical="true"/>
-     <!-- android:src="@drawable/arrow" -->
+            <ImageView
+                android:id="@+id/list_item_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/temp_no_01" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    " />
+
+            <TextView
+                android:id="@+id/list_item_tag1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="tag1tag1tag1"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    " />
+
+            <TextView
+                android:id="@+id/list_item_tag2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="tag2tag2tag2"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="    " />
+
+            <TextView
+                android:id="@+id/list_item_tag3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="tag3tag3tag3"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--  ListView最左边的缩略图 -->
+    <!--<LinearLayout-->
+    <!--android:id="@+id/thumbnail"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_marginRight="5dip"-->
+    <!--android:background="@drawable/image_bg"-->
+    <!--android:padding="3dip">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/list_image"-->
+    <!--android:layout_width="50dip"-->
+    <!--android:layout_height="50dip" />-->
+    <!--&lt;!&ndash;  android:src="@drawable/rihanna" &ndash;&gt;-->
+
+    <!--</LinearLayout>-->
+
+    <!--&lt;!&ndash; 歌曲名&ndash;&gt;-->
+    <!--<TextView-->
+    <!--android:id="@+id/title"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignTop="@+id/thumbnail"-->
+    <!--android:layout_toRightOf="@+id/thumbnail"-->
+    <!--android:text="Rihanna Love the way lie"-->
+    <!--android:textColor="#040404"-->
+    <!--android:textSize="15dip"-->
+    <!--android:textStyle="bold"-->
+    <!--android:typeface="sans" />-->
+
+    <!--&lt;!&ndash; 歌手名 &ndash;&gt;-->
+    <!--<TextView-->
+    <!--android:id="@+id/artist"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/title"-->
+    <!--android:layout_marginTop="1dip"-->
+    <!--android:layout_toRightOf="@+id/thumbnail"-->
+    <!--android:text="Just gona stand there and ..."-->
+    <!--android:textColor="#343434"-->
+    <!--android:textSize="10dip" />-->
+
+    <!--&lt;!&ndash; 歌曲播放时间 &ndash;&gt;-->
+    <!--<TextView-->
+    <!--android:id="@+id/duration"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_alignTop="@id/title"-->
+    <!--android:layout_marginRight="5dip"-->
+    <!--android:gravity="right"-->
+    <!--android:text="5:45"-->
+    <!--android:textColor="#10bcc9"-->
+    <!--android:textSize="10dip"-->
+    <!--android:textStyle="bold" />-->
+
+    <!--&lt;!&ndash; 进入播放 &ndash;&gt;-->
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true" />-->
+    <!--&lt;!&ndash; android:src="@drawable/arrow" &ndash;&gt;-->
 
 </RelativeLayout>

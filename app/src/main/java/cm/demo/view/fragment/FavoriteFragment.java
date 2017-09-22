@@ -85,6 +85,35 @@ public class FavoriteFragment extends BaseFragment {
         }
     }
 
+    private void showTabItemList(int index) {
+        switch (index) {
+            case 0: {
+                showCategoryList();
+                break;
+            }
+            case 1: {
+                showSexList();
+                break;
+            }
+            case 2: {
+                showAgeList();
+                break;
+            }
+        }
+    }
+
+    private void showCategoryList() {
+
+    }
+
+    private void showSexList() {
+
+    }
+
+    private void showAgeList() {
+
+    }
+
     @Override
     public void onHiddenChanged(boolean hidden) {
         if (favoriteImage == null)

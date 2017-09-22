@@ -11,6 +11,8 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
@@ -30,7 +32,7 @@ public class VideoPlayActivity extends CMBaseActivity {
     private int question_num = 0;
     private QuestionModel currentModel;
     private Handler handler = new Handler();
-    private ImageButton playImageButton = null;
+    private ImageView playImageButton = null;
     private ImageButton openBounsButton = null;
     private TextView playHintText = null;
     private TextView bonusDetail = null;
@@ -48,6 +50,14 @@ public class VideoPlayActivity extends CMBaseActivity {
         setContentView(R.layout.video_play);
 
         videoView = (VideoView) findViewById(R.id.videoView);
+        RelativeLayout.LayoutParams layoutParams =
+                new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
+        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_TOP);
+        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
+        layoutParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
+        videoView.setLayoutParams(layoutParams);
+
         videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
@@ -75,9 +85,10 @@ public class VideoPlayActivity extends CMBaseActivity {
             }
         });
 
-        playImageButton = (ImageButton) findViewById(R.id.playImage);
+        playImageButton = (ImageView) findViewById(R.id.playImage);
         if (null != playImageButton) {
-            playImageButton.setImageResource(R.drawable.gradient_bg);
+            playImageButton.setImageResource(R.drawable.list_item_play);
+            playImageButton.setBackgroundResource(0);
             playImageButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

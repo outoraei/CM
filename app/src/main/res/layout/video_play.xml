@@ -7,17 +7,11 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="250dp">
-        <VideoView
-            android:id="@+id/videoView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
-        <ImageButton
+        <ImageView
             android:id="@+id/playImage"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_centerInParent="true"
-            android:src="@color/grey"
             />
         <ImageButton
             android:id="@+id/openBouns"
@@ -146,5 +140,15 @@
             android:textSize="40dp">
         </TextView>
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
 
 </LinearLayout>
