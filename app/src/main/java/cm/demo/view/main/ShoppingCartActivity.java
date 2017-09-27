@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cm.demo.R;
-import cm.demo.model.ShoppingItemModel;
+import cm.demo.model.ItemModel;
 import cm.demo.util.CMLog;
 import cm.demo.view.base.CMBaseActivity;
 import cm.demo.view.commoncontrol.CMListAdapter;
@@ -26,7 +26,7 @@ import cm.demo.view.commoncontrol.CMListAdapter;
 public class ShoppingCartActivity extends CMBaseActivity {
 
     ListView shoppingCartListView = null;
-    List<ShoppingItemModel> shoppingList = null;
+    List<ItemModel> shoppingList = null;
     ShoppingListAdapter adapter = null;
 
 
@@ -72,16 +72,16 @@ public class ShoppingCartActivity extends CMBaseActivity {
 
     private void initShoppingData() {
         CMLog.LogD("initSquareListData");
-        shoppingList = new ArrayList<ShoppingItemModel>();
-        ShoppingItemModel model;
+        shoppingList = new ArrayList<ItemModel>();
+        ItemModel model;
         for (int i = 0; i < 10; i++) {
-            model = new ShoppingItemModel();
+            model = new ItemModel();
             model.setItemID(i);
             model.setName("Name " + i);
             model.setDescription("Description" + i);
-            model.setEachValue(i);
+            model.setValue(i);
             model.setImageURI("");
-            model.setNum(i);
+            model.setItem_num(i);
             shoppingList.add(model);
         }
     }
@@ -89,13 +89,13 @@ public class ShoppingCartActivity extends CMBaseActivity {
     private View.OnClickListener onPlusClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Button btn = (Button)v;
+            Button btn = (Button) v;
             int pos = (Integer) btn.getTag();
-            int currentNum = shoppingList.get(pos).getNum();
+            int currentNum = shoppingList.get(pos).getItem_num();
             if (currentNum - 1 <= 0) {
                 return;
             }
-            shoppingList.get(pos).setNum(currentNum - 1);
+            shoppingList.get(pos).setItem_num(currentNum - 1);
             adapter.notifyDataSetChanged();
         }
     };
@@ -103,9 +103,9 @@ public class ShoppingCartActivity extends CMBaseActivity {
     private View.OnClickListener onMinusClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Button btn = (Button)v;
+            Button btn = (Button) v;
             int pos = (Integer) btn.getTag();
-            shoppingList.get(pos).setNum(shoppingList.get(pos).getNum() + 1);
+            shoppingList.get(pos).setItem_num(shoppingList.get(pos).getItem_num() + 1);
             adapter.notifyDataSetChanged();
         }
     };
@@ -175,14 +175,14 @@ public class ShoppingCartActivity extends CMBaseActivity {
                 holder = (ViewHolder) convertView.getTag();
             }
 
-            ShoppingItemModel item = shoppingList.get(position);
+            ItemModel item = shoppingList.get(position);
 
             holder.name.setText(item.getName());
             holder.description.setText(item.getDescription());
-            holder.eachvalue.setText("" + item.getEachValue());
+            holder.eachvalue.setText("" + item.getValue());
 
-            holder.num.setText("" + item.getNum());
-            holder.totalvalue.setText("" + item.getNum() * item.getEachValue());
+            holder.num.setText("" + item.getItem_num());
+            holder.totalvalue.setText("" + item.getItem_num() * item.getValue());
 
             holder.minus_num.setTag(position);
             holder.minus_num.setOnClickListener(onPlusClickListener);

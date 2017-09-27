@@ -56,10 +56,10 @@
 
     <string name="shoppingcart_item_plus">+</string>
     <string name="shoppingcart_item_minus">-</string>
-    <string name="shoppingcart_item_totalvalue">合计：</string>
+    <string name="shoppingcart_item_totalvalue">合计：¥</string>
     <string name="shoppingcart_item_description">描述：</string>
     <string name="shoppingcart_item_name">商品名称：</string>
-    <string name="shoppingcart_item_eachvalue">单价：</string>
+    <string name="shoppingcart_item_eachvalue">单价：¥</string>
     <string name="shoppingcart_checkout">去结算</string>
     <string name="shoppingcart_checkout_title">确认订单</string>
 
@@ -69,4 +69,25 @@
     <string name="my_wallet_item_money_unit">元</string>
     <string name="my_wallet_item_coupon_unit">张</string>
 
+    <string name="order_oper_pay_immediately"> 立刻付款 </string>
+    <string name="order_oper_extend_receipt"> 延长收货 </string>
+    <string name="order_oper_search_logistics"> 查看物流 </string>
+    <string name="order_oper_confirm_receipt"> 确认收货 </string>
+    <string name="order_oper_reminder_delivery"> 提醒发货 </string>
+    <string name="order_oper_cancel_order"> 取消订单 </string>
+    <string name="order_oper_delete_order"> 删除订单 </string>
+    <string name="order_oper_appraise"> 评价 </string>
+    <string name="order_item_num">x</string>
+    <string name="order_item_total_value"> 合计：¥</string>
+    <string name="order_item_totalnum"> 共$$$件商品 </string>
+    <string name="order_item_replacenum">$$$</string>
+    <string name="order_item_description">描述：</string>
+    <string name="order_item_name">商品名称：</string>
+    <string name="order_item_eachvalue">单价：¥</string>
+
+    <string name="order_status_unknown">未知状态</string>
+    <string name="order_status_waitfor_pay">待支付</string>
+    <string name="order_status_waitfor_delivery">待发货</string>
+    <string name="order_status_waitfor_receipt">待收货</string>
+    <string name="order_status_waitfor_comments">待评价</string>
 </resources>

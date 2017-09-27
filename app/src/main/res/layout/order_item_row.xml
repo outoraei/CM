@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/order_item_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/order_item_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:src="@drawable/favorite_unselected" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/order_item_image">
+
+                <TextView
+                    android:id="@+id/order_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="left|center"
+                    android:text="@string/order_item_name"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/order_item_content_space"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/order_item_name"
+                    android:gravity="left|center"
+                    android:text="   "
+                    android:textSize="5dp" />
+
+                <TextView
+                    android:id="@+id/order_item_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/order_item_content_space"
+                    android:gravity="left|center"
+                    android:text="@string/shoppingcart_item_description"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/order_item_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="left|center"
+                    android:text="@string/order_item_eachvalue"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/order_item_content_space3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/order_item_value"
+                    android:gravity="left|center"
+                    android:text="   "
+                    android:textSize="5dp" />
+
+                <TextView
+                    android:id="@+id/order_item_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/order_item_content_space3"
+                    android:gravity="left|center"
+                    android:text="@string/order_item_num"
+                    android:textSize="10dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

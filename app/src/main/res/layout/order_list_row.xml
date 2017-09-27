@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/order_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" order_shop_name " />
+
+        <TextView
+            android:id="@+id/order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text=" order_status " />
+    </RelativeLayout>
+
+    <cm.demo.view.customview.OrderItemListView
+        android:id="@+id/order_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_layout"
+        android:divider="#b5b5b5"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/list_selector"
+        android:scrollbars="none"
+        android:scrollingCache="false" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/order_list">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:id="@+id/order_oper_total_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    android:id="@+id/order_item_totalnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:text="@string/order_item_totalnum" />
+
+                <TextView
+                    android:id="@+id/order_oper_space_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/order_item_totalnum"
+                    android:gravity="left|center"
+                    android:text="    " />
+
+                <TextView
+                    android:id="@+id/order_item_totalvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/order_oper_space_3"
+                    android:gravity="left|center"
+                    android:text="@string/order_item_total_value" />
+
+                <TextView
+                    android:id="@+id/order_item_ordercode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:text=""
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/order_oper_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/order_oper_total_layout"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/order_waitfor_pay_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/order_oper_pay_immediately"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/order_waitfor_pay_space"
+                        android:text="@string/order_oper_pay_immediately" />
+
+                    <TextView
+                        android:id="@+id/order_waitfor_pay_space"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/order_oper_cancel_order"
+                        android:text="    " />
+
+                    <TextView
+                        android:id="@+id/order_oper_cancel_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/order_oper_cancel_order" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/order_waitfor_receipt_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/order_oper_extend_receipt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/order_oper_space"
+                        android:text="@string/order_oper_extend_receipt" />
+
+                    <TextView
+                        android:id="@+id/order_oper_space"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/order_oper_search_logistics"
+                        android:text="    " />
+
+                    <TextView
+                        android:id="@+id/order_oper_search_logistics"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/order_oper_space_2"
+                        android:text="@string/order_oper_search_logistics" />
+
+                    <TextView
+                        android:id="@+id/order_oper_space_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/order_oper_confirm_receipt"
+                        android:text="    " />
+
+                    <TextView
+                        android:id="@+id/order_oper_confirm_receipt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/order_oper_confirm_receipt" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/order_waitfor_delivery_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/order_oper_reminder_delivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/order_oper_reminder_delivery" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/order_waitfor_appraise_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/order_oper_appraise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/order_waitfor_appraise_space"
+                        android:text="@string/order_oper_appraise" />
+
+                    <TextView
+                        android:id="@+id/order_waitfor_appraise_space"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/order_oper_delete_order"
+                        android:text="    " />
+
+                    <TextView
+                        android:id="@+id/order_oper_delete_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/order_oper_delete_order" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
