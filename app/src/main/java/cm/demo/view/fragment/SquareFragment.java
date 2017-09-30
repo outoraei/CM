@@ -150,7 +150,7 @@ public class SquareFragment extends BaseFragment {
             ViewHolder holder;
             if (convertView == null) {
                 holder = new ViewHolder();
-                convertView = inflater.inflate(R.layout.list_row, null);
+                convertView = inflater.inflate(R.layout.square_list_row, null);
                 holder.title = (TextView) convertView.findViewById(R.id.list_item_intro_content);
                 holder.duration = (TextView) convertView.findViewById(R.id.list_item_duration);
                 holder.icon = (ImageView) convertView.findViewById(R.id.list_item_icon);

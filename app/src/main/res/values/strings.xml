@@ -19,8 +19,8 @@
     <string name="videoplay_recommand">推荐</string>
     <string name="answer_correct_congratulation">恭喜你，答对了</string>
     <string name="answer_incorrect">真遗憾，答错了，再接再厉！</string>
-    <string name="button_right">right</string>
-    <string name="button_wrong">wrong</string>
+    <string name="button_right">是</string>
+    <string name="button_wrong">否</string>
     <string name="play">播放</string>
     <string name="stop">暂停</string>
     <string name="retry">重播</string>

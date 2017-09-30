@@ -1,34 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation>
 
+    <!--<level1>-->
+        <!--<code>-->
+<!--100-->
+        <!--</code>-->
+
+        <!--<content>-->
+<!--最新-->
+        <!--</content>-->
+
+        <!--<level2>-->
+            <!--<code>-->
+<!--200-->
+            <!--</code>-->
+
+            <!--<content>-->
+<!--zzz-->
+            <!--</content>-->
+
+            <!--<item>-->
+                <!--<code>-->
+<!--300-->
+                <!--</code>-->
+
+                <!--<content>-->
+<!--ppp-->
+                <!--</content>-->
+            <!--</item>-->
+        <!--</level2>-->
+    <!--</level1>-->
     <level1>
-        <code>
-100
-        </code>
+        <code>100</code>
+        <content>最新</content>
+    </level1>
+    <level1>
+        <code>101</code>
+        <content>家居</content>
+    </level1>
 
-        <content>
-yyy
-        </content>
+    <level1>
+        <code>102</code>
+        <content>美食</content>
+    </level1>
 
-        <level2>
-            <code>
-200
-            </code>
+    <level1>
+        <code>103</code>
+        <content>运动</content>
+    </level1>
 
-            <content>
-zzz
-            </content>
+    <level1>
+        <code>104</code>
+        <content>厨房</content>
+    </level1>
 
-            <item>
-                <code>
-300
-                </code>
+    <level1>
+        <code>105</code>
+        <content>母婴</content>
+    </level1>
 
-                <content>
-ppp
-                </content>
-            </item>
-        </level2>
+    <level1>
+        <code>106</code>
+        <content>数码</content>
+    </level1>
+
+    <level1>
+        <code>107</code>
+        <content>出行</content>
+    </level1>
+
+    <level1>
+        <code>108</code>
+        <content>宠物</content>
+    </level1>
+
+    <level1>
+        <code>109</code>
+        <content>礼物</content>
+    </level1>
+
+    <level1>
+        <code>110</code>
+        <content>时尚</content>
+    </level1>
+
+    <level1>
+        <code>111</code>
+        <content>办公</content>
+    </level1>
+
+    <level1>
+        <code>112</code>
+        <content>其他</content>
     </level1>
 
 </navigation>

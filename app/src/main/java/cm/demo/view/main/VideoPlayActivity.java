@@ -4,8 +4,8 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.MediaPlayer;
-import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
@@ -41,12 +41,15 @@ public class VideoPlayActivity extends CMBaseActivity {
     private ImageButton wallet = null;
     private VideoView videoView = null;
 
-    private static String big_buck_bunny_path = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
+    //    private static String big_buck_bunny_path = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
+    private static String local_video_path = Environment.getExternalStorageDirectory() + "/test.mp4";
+//    private static String local_video_path = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         CMLog.LogD("onCreate ");
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.video_play);
 
         videoView = (VideoView) findViewById(R.id.videoView);
@@ -130,6 +133,7 @@ public class VideoPlayActivity extends CMBaseActivity {
         }
 
         questionModelList = QuestionListCreater.getQuestionListFromXML(this);
+
         handler.post(vieoRunnable);
     }
 
@@ -137,7 +141,8 @@ public class VideoPlayActivity extends CMBaseActivity {
         @Override
         public void run() {
             if (videoView != null) {
-                videoView.setVideoURI(Uri.parse(big_buck_bunny_path));
+                //                    videoView.setVideoURI(Uri.parse(big_buck_bunny_path));
+                videoView.setVideoPath(local_video_path);
             }
         }
     };
@@ -241,7 +246,8 @@ public class VideoPlayActivity extends CMBaseActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 if (videoView != null) {
-                    videoView.setVideoURI(Uri.parse(big_buck_bunny_path));
+//                    videoView.setVideoURI(Uri.parse(big_buck_bunny_path));
+                    videoView.setVideoPath(local_video_path);
                 }
                 dialog.dismiss();
             }
