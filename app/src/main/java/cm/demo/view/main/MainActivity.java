@@ -4,13 +4,13 @@ import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.KeyEvent;
 import android.widget.EditText;
+import android.widget.VideoView;
 
 import cm.demo.R;
 import cm.demo.util.CMLog;
 import cm.demo.util.CMNavigateCreater;
 import cm.demo.view.base.CMBaseActivity;
 import cm.demo.view.base.CMFragmentManager;
-import io.vov.vitamio.widget.VideoView;
 
 public class MainActivity extends CMBaseActivity {
 

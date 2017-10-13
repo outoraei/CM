@@ -99,7 +99,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignLeft="@+id/shopping_item_num"
-                        android:src="@drawable/scrubber_control_selector_holo"
+                        android:src="@drawable/image_bg"
                         android:text="@string/shoppingcart_item_minus"
                         android:focusable="false"/>
 
@@ -116,7 +116,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignRight="@+id/shopping_item_num"
-                        android:src="@drawable/scrubber_control_selector_holo"
+                        android:src="@drawable/image_bg"
                         android:text="@string/shoppingcart_item_plus"
                         android:focusable="false"/>
                 </LinearLayout>

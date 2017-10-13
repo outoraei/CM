@@ -35,7 +35,7 @@
                 android:layout_height="30dp"
                 android:id="@+id/my_setting_go"
                 android:layout_alignParentRight="true"
-                android:src="@drawable/scrubber_control_selector_holo"/>
+                android:src="@drawable/image_bg"/>
         </RelativeLayout>
     </LinearLayout>
 

@@ -94,7 +94,7 @@ public class MyFragment extends BaseFragment {
         });
 
 
-        List<MySettingModel> dataList = new ArrayList<>();
+        List<MySettingModel> dataList = new ArrayList<MySettingModel>();
         MySettingModel model;
         for (int i = 0; i < mySettingIcon.length; i++) {
             model = new MySettingModel();

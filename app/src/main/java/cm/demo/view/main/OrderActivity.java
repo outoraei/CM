@@ -27,12 +27,12 @@ public class OrderActivity extends CMBaseActivity {
 
         listView = (ListView) findViewById(R.id.order_list);
 
-        List<OrderModel> orderModelList = new ArrayList<>();
+        List<OrderModel> orderModelList = new ArrayList<OrderModel>();
 
         OrderModel orderItem;
         for (int i = 1; i <= 5; i++) {
 
-            List<ItemModel> itemModelList = new ArrayList<>();
+            List<ItemModel> itemModelList = new ArrayList<ItemModel>();
 
             double itemNum = (Math.random() * 10) + 1;
 //            double itemNum = 3;

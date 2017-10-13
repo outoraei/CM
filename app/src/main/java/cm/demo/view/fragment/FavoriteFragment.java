@@ -114,7 +114,7 @@ public class FavoriteFragment extends BaseFragment {
 
     private void initTabItems() {
         List<NavigateModel.Node> list = NavigateModel.getInstance().getNavigateList();
-        List<NavigateModel.Node> levelOneList = new ArrayList<>();
+        List<NavigateModel.Node> levelOneList = new ArrayList<NavigateModel.Node>();
 
         for (int index = 0; index < list.size(); index++) {
             NavigateModel.Node item = list.get(index);
@@ -169,7 +169,7 @@ public class FavoriteFragment extends BaseFragment {
     private void updateGridViewData() {
         Map<String, Object> map = null;
         for (int i = 0; i < 30; i++) {
-            map = new HashMap<>();
+            map = new HashMap<String, Object>();
             map.put(GRIDVIEW_ITEM_BG, R.drawable.tab_bg);
             map.put(GRIDVIEW_ITEM_INTRO_CONTENT, "TestTitle" + i);
             map.put(GRIDVIEW_ITEM_DURATION, i + ":00");
