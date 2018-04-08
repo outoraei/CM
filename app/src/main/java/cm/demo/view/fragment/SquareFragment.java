@@ -95,7 +95,7 @@ public class SquareFragment extends BaseFragment {
         square_list_data = new ArrayList<CMInfoModel>();
         CMInfoModel model;
         for (int i = 0; i < 10; i++) {
-            model = new CMInfoModel();
+            model = new CMInfoModel(getActivity());
             model.setTitle("TestTitle" + i);
             model.setCreator("Tester" + i);
             model.setDuration(i + ":00");

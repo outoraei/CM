@@ -38,7 +38,7 @@ public class OrderActivity extends CMBaseActivity {
 //            double itemNum = 3;
             ItemModel item;
             for (int index = 1; index <= itemNum; index++) {
-                item = new ItemModel();
+                item = new ItemModel(this);
                 item.setName("item " + i + " , " + index);
                 item.setValue(index);
                 item.setDescription("desc " + i + " , " + index);
@@ -46,7 +46,7 @@ public class OrderActivity extends CMBaseActivity {
                 itemModelList.add(item);
             }
 
-            orderItem = new OrderModel();
+            orderItem = new OrderModel(this);
             orderItem.setOrderCode("ordercode " + i);
             orderItem.setShopName("shop " + i);
             orderItem.setOrderStatus(i - 2);

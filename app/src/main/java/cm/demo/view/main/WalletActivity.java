@@ -70,7 +70,7 @@ public class WalletActivity extends CMBaseActivity {
         String[] details = new String[]{getBalance(), getBonus(), getCoupon()};
         CMWalletModel model;
         for (int i = 0; i < myWalletNames.length; i++) {
-            model = new CMWalletModel();
+            model = new CMWalletModel(this);
             model.setName(getString(myWalletNames[i]));
             model.setDetail(details[i]);
             walletModelList.add(model);

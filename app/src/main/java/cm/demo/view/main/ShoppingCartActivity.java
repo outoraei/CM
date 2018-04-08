@@ -75,7 +75,7 @@ public class ShoppingCartActivity extends CMBaseActivity {
         shoppingList = new ArrayList<ItemModel>();
         ItemModel model;
         for (int i = 0; i < 10; i++) {
-            model = new ItemModel();
+            model = new ItemModel(this);
             model.setItemID(i);
             model.setName("Name " + i);
             model.setDescription("Description" + i);

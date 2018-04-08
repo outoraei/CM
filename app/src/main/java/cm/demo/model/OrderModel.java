@@ -1,11 +1,18 @@
 package cm.demo.model;
 
+import android.content.Context;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import cm.demo.util.CMLog;
 
 public class OrderModel extends CMBaseModel {
+
+    public OrderModel(Context context) {
+        super(context);
+    }
 
     public String getSearch_logistics_code() {
         return search_logistics_code;
@@ -91,4 +98,14 @@ public class OrderModel extends CMBaseModel {
     public static final int ORDER_STATUS_WAITFOR_DELIVERY = 1;
     public static final int ORDER_STATUS_WAITFOR_RECEIPT = 2;
     public static final int ORDER_STATUS_WAITFOR_COMMENTS = 3;
+
+    @Override
+    protected String makeStrRequestURL() {
+        return null;
+    }
+
+    @Override
+    protected Map<String, String> makeMapRequestURL() {
+        return null;
+    }
 }

@@ -1,6 +1,10 @@
 package cm.demo.model;
 
 
+import android.content.Context;
+
+import java.util.Map;
+
 public class CMInfoModel extends CMBaseModel {
 
     private int id;
@@ -12,6 +16,10 @@ public class CMInfoModel extends CMBaseModel {
     private String tag1;
     private String tag2;
     private String tag3;
+
+    public CMInfoModel(Context context) {
+        super(context);
+    }
 
     public String getTag1() {
         return tag1;
@@ -83,5 +91,15 @@ public class CMInfoModel extends CMBaseModel {
 
     public void setCreator(String creater) {
         this.creator = creator;
+    }
+
+    @Override
+    protected String makeStrRequestURL() {
+        return null;
+    }
+
+    @Override
+    protected Map<String, String> makeMapRequestURL() {
+        return null;
     }
 }

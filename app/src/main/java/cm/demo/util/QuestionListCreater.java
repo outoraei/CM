@@ -51,7 +51,7 @@ public class QuestionListCreater {
 					}
 					attrbuteCount++;
 					if (ATTRIBUTE_MUST_COUNT == attrbuteCount) {
-						model.addItem(title, content, answer);
+						model.addItem(context, title, content, answer);
 						attrbuteCount = 0;
 					}
 				}

@@ -1,8 +1,13 @@
 package cm.demo.model;
 
 
+import android.content.Context;
+
+import java.util.Map;
+
 public class QuestionModel extends CMBaseModel{
-    public QuestionModel(String title, String content, boolean answer) {
+    public QuestionModel(Context context, String title, String content, boolean answer) {
+        super(context);
         question_title = title;
         question_content = content;
         question_answer = answer;
@@ -38,5 +43,15 @@ public class QuestionModel extends CMBaseModel{
 
     public boolean isAnswerCorrect(boolean user_answer) {
         return question_answer == user_answer;
+    }
+
+    @Override
+    protected String makeStrRequestURL() {
+        return null;
+    }
+
+    @Override
+    protected Map<String, String> makeMapRequestURL() {
+        return null;
     }
 }

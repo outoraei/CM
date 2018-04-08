@@ -1,6 +1,26 @@
 package cm.demo.model;
 
+import android.content.Context;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class RegisterModel extends CMBaseModel {
+
+    @Override
+    protected String makeStrRequestURL() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("username").append("=").append(name).append("&").append("password").append("=").append(password);
+        return sb.toString();
+    }
+
+    @Override
+    protected Map<String, String> makeMapRequestURL() {
+        Map<String, String> map = new HashMap<String, String>();
+        map.put("username", name);
+        map.put("password", password);
+        return map;
+    }
 
     enum REGISTER_TYPE {
         REGISTER_TYPE_NORMAL, REGISTER_TYPE_WECHAT, REGISTER_TYPE_QQ,
@@ -12,7 +32,8 @@ public class RegisterModel extends CMBaseModel {
     private String password;
     private REGISTER_TYPE registerType;
 
-    public RegisterModel(String phoneNo, String password) {
+    public RegisterModel(Context context, String phoneNo, String password) {
+        super(context);
         this.phoneNo = phoneNo;
         this.password = password;
     }
@@ -57,5 +78,4 @@ public class RegisterModel extends CMBaseModel {
         this.registerType = registerType;
     }
 
-    ;
 }

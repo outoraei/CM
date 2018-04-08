@@ -33,13 +33,25 @@ import cm.demo.view.main.WalletActivity;
 
 public class MyFragment extends BaseFragment {
 
-    private int[] mySettingNameID = {R.string.my_wallet_title, R.string.my_order_title,
-            R.string.my_shoppingcart_title, R.string.my_setting_title, R.string.my_versionupdate_title,
-            R.string.my_introduction_title, R.string.my_customservice_title};
+    private int[] mySettingNameID = {
+            R.string.my_wallet_title,
+//            R.string.my_order_title,
+//            R.string.my_shoppingcart_title,
+            R.string.my_setting_title,
+            R.string.my_versionupdate_title,
+            R.string.my_introduction_title,
+            R.string.my_customservice_title
+    };
 
-    private int[] mySettingIcon = {R.drawable.my_selected, R.drawable.favorite_selected,
-            R.drawable.square_selected, R.drawable.favorite_unselected, R.drawable.my_unselected,
-            R.drawable.square_unselected, R.drawable.ic_launcher};
+    private int[] mySettingIcon = {
+            R.drawable.my_selected,
+//            R.drawable.favorite_selected,
+//            R.drawable.square_selected,
+            R.drawable.favorite_unselected,
+            R.drawable.my_unselected,
+            R.drawable.square_unselected,
+            R.drawable.ic_launcher
+    };
 
     private ImageView myImage;
     private TextView myText;
@@ -97,7 +109,7 @@ public class MyFragment extends BaseFragment {
         List<MySettingModel> dataList = new ArrayList<MySettingModel>();
         MySettingModel model;
         for (int i = 0; i < mySettingIcon.length; i++) {
-            model = new MySettingModel();
+            model = new MySettingModel((Context)getActivity());
             model.setItemIcon(mySettingIcon[i]);
             model.setItemNameID(mySettingNameID[i]);
             model.setNextscreen(R.drawable.ic_launcher);
@@ -114,27 +126,27 @@ public class MyFragment extends BaseFragment {
                         goToWalletScreen();
                         break;
                     }
+//                    case 1: {
+//                        goToOrderScreen();
+//                        break;
+//                    }
+//                    case 2: {
+//                        goToShoppingCart();
+//                        break;
+//                    }
                     case 1: {
-                        goToOrderScreen();
-                        break;
-                    }
-                    case 2: {
-                        goToShoppingCart();
-                        break;
-                    }
-                    case 3: {
                         goToSettingScreen();
                         break;
                     }
-                    case 4: {
+                    case 2: {
                         goToVersionUpdateScreen();
                         break;
                     }
-                    case 5: {
+                    case 3: {
                         goToIntroductionScreen();
                         break;
                     }
-                    case 6: {
+                    case 4: {
                         goToCustomServiceScreen();
                         break;
                     }

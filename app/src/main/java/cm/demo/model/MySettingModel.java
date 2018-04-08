@@ -1,10 +1,18 @@
 package cm.demo.model;
 
+import android.content.Context;
+
+import java.util.Map;
+
 public class MySettingModel extends CMBaseModel {
     private int itemIcon;
     private String itemName;
     private int itemNameID;
     private int nextscreen;
+
+    public MySettingModel(Context context) {
+        super(context);
+    }
 
     public int getItemIcon() {
         return itemIcon;
@@ -38,4 +46,13 @@ public class MySettingModel extends CMBaseModel {
         this.itemNameID = itemNameID;
     }
 
+    @Override
+    protected String makeStrRequestURL() {
+        return null;
+    }
+
+    @Override
+    protected Map<String, String> makeMapRequestURL() {
+        return null;
+    }
 }

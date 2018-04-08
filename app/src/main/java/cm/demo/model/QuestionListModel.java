@@ -1,6 +1,8 @@
 package cm.demo.model;
 
 
+import android.content.Context;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,8 +24,8 @@ public class QuestionListModel {
         return questionModelList;
     }
 
-    public void addItem(String title, String content, String answer) {
-        questionModelList.add(new QuestionModel(title, content, answer.contains(ANSWER_TRUE)));
+    public void addItem(Context context, String title, String content, String answer) {
+        questionModelList.add(new QuestionModel(context, title, content, answer.contains(ANSWER_TRUE)));
     }
 
     public String toString() {

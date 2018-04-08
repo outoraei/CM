@@ -1,5 +1,9 @@
 package cm.demo.model;
 
+import android.content.Context;
+
+import java.util.Map;
+
 public class ItemModel extends CMBaseModel {
 
     private int itemID;
@@ -9,6 +13,10 @@ public class ItemModel extends CMBaseModel {
     private int item_num;
     private long value;
     private String image_uri;
+
+    public ItemModel(Context context) {
+        super(context);
+    }
 
     public void setItemID(int itemID) {
         this.itemID = itemID;
@@ -65,5 +73,15 @@ public class ItemModel extends CMBaseModel {
 
     public void setItem_num(int item_num) {
         this.item_num = item_num;
+    }
+
+    @Override
+    protected String makeStrRequestURL() {
+        return null;
+    }
+
+    @Override
+    protected Map<String, String> makeMapRequestURL() {
+        return null;
     }
 }

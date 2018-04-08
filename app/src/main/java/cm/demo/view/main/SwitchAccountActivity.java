@@ -35,7 +35,7 @@ public class SwitchAccountActivity extends CMBaseActivity {
             password = password_edittext.getText().toString();
         }
 
-        int ret = ServerLogic.getInstance().login(new RegisterModel(phoneNum, password));
+        int ret = ServerLogic.getInstance().login(new RegisterModel(this, phoneNum, password));
         if (ServerLogic.LOGIN_OK == ret) {
             CMLog.LogD("switch account activity finish");
             this.finish();
